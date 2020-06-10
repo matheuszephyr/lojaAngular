@@ -1,0 +1,57 @@
+.card-deck {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    box-sizing: unset;
+}
+
+.card-deck .card {
+    width: 200px;
+    min-width: 200px;
+    max-width: 200px;
+    margin: 20px 17px;    
+    background-image: linear-gradient(white, AliceBlue);    
+}
+
+.card-title{
+    color: darkblue;
+}
+
+.card-deck .card .card-img-top {
+    height: 160px;    
+}
+
+.card-text{
+    color: green;
+}
+
+.botao{
+    background-color: darkblue;
+}
+
+.display-4{
+    color: darkblue;
+}
+.lead{
+    color: darkblue;
+}
+
+.container{
+    padding-top: 10px;
+    border: darkblue;
+    width: 90%;
+    height: 90%;
+    box-sizing: unset;    
+    background-color: white;    
+}
+
+.barra{
+    margin-top: 12px;
+    margin-bottom: 10px !important;
+}
+
+h1{
+    font-size: 40px;
+}
+
+

@@ -1,0 +1,63 @@
+.barra{
+    margin-top: 12px;
+    margin-bottom: 10px !important;
+}
+
+.display-4{
+    color: darkblue;
+}
+.lead{
+    color: darkblue;
+}
+
+.quant{
+    width: 15%;
+}
+
+td th{
+    vertical-align: center !important;
+}
+
+img{    
+    width: 5%;
+}
+
+.cabeca{
+    color: white;
+}
+
+.total{
+    text-align: center;    
+    color: green;
+    font: 40 20px Roboto, "Helvetica Neue", sans-serif;   
+    background-color:greenyellow;    
+    border-radius: 10px 20px; 
+    border-color: green;
+    align-content: center;
+    font-weight: 500;   
+    padding: 5px;
+}
+
+.numeroPed{
+    color: red;
+    font: 40 20px Roboto, "Helvetica Neue", sans-serif;
+    font-weight: 500;
+}
+
+.card-header{
+    font-size: 18px;
+}
+
+h1{
+    font-size: 40px;
+}
+
+.ajust{
+    margin-bottom: 10px;
+}
+
+.divusu{
+    background-color: white;
+    color: black;
+    font-size: 18px;
+}

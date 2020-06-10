@@ -1,0 +1,33 @@
+
+
+
+<div class="container shadow-lg p-3 mb-5 bg-white rounded">
+    <h1 class="display-4">Bem Vindo!</h1>
+    <p class="lead">Selecione os produtos e adicione na sua cesta de compras</p>
+    <hr class="my-4">    
+    <!--BOTAO PARA ACESSAR A CESTA DE COMPRAS-->
+    <button type="button" class="btn btn-primary" (click)="gotoCesta($event)">
+        Cesta de Compras <span class="badge badge-light">{{contador}}</span>
+        <span class="sr-only">Produtos na cesta</span>
+    </button>
+    <!--LISTA DE PRODUTOS-->    
+    <div class="card-deck">     
+        <div class="card" *ngFor="let produto of listaProdutos">
+            <img class="card-img-top" src="{{produto.imagem}}" alt="Imagem de capa do card">
+            <div class="card-body">
+                <h2 class="card-title">{{produto.nome}}</h2>                
+                <span class="card-text"> R$ {{produto.valor | number : '1.2-2' }}</span>
+            </div>
+            <div class="card-footer">
+                <button type="button" class="btn btn-primary d-flex flex-wrap" (click)="adcCesta(produto, $event)">Adicionar a Cesta</button>
+            </div>
+        </div>
+    </div>
+    <div class="barra shadow-lg p-3 mb-5 bg-white rounded">
+    <p class="lead">Progresso da sua compra</p>
+    <div class="progress">
+        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+    </div>    
+
+</div>

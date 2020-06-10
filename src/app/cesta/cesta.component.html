@@ -1,0 +1,53 @@
+<div class="container shadow-lg p-3 mb-5 bg-white rounded">
+  <h1 class="display-4">Cesta de Compras</h1>
+  <p class="lead">Confira seu pedido e clique em <b>Finalizar Compra</b></p>
+  <hr class="my-4">
+  <p class="numeroPed">Numero do Pedido : {{pedidoCompleto.idPedido}}</p>
+  <!--TABELA DE ITENS DO PEDIDO-->  
+    <table class="table table-striped" *ngIf="!load; else loadtabela">
+        <thead class="bg-primary cabeca">
+          <tr class="bg-primary">            
+            <th scope="col" class="bg-primary">Produto</th>
+            <th scope="col" class="bg-primary">Valor</th>
+            <th scope="col" class="bg-primary">Quantidade</th>
+            <th scope="col" class="bg-primary">Total</th>
+            <th scope="col" class="bg-primary"></th>
+          </tr>
+        </thead>        
+        <tbody>
+          <tr *ngFor="let produto of pedidoCompleto.produtos">                                         
+            <td class="align-middle">{{produto.nome}}</td>
+            <td class="align-middle">R$ {{produto.valor | number : '1.2-2' }}</td>
+            <td class="align-middle"><input type="number" #quantInput value={{produto.quantidade}} min="1" class="form-control quant" id="TxtQuantidade" (change)="atualizaQuantidade(produto, quantInput.value)"></td>
+            <td class="align-middle">R$ {{produto.total | number : '1.2-2' }}</td>
+            <td class="align-middle">
+              <button type="button" class="btn btn-danger" (click)="removeProduto(produto)">
+              <svg class="bi bi-trash-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5a.5.5 0 0 0-1 0v7a.5.5 0 0 0 1 0v-7z"/>
+              </svg>
+            </button>
+            </td>
+          </tr>          
+        </tbody>
+      </table>
+      <ng-template #loadtabela> 
+        <p>Carregando...</p>
+      </ng-template>
+      
+      <p class="total" *ngIf="!load; else loadin">Total : R$ {{total | number : '1.2-2' }}</p>
+      <ng-template #loadin> 
+        <p class="total" >Carregando...</p>
+      </ng-template>
+      
+      <!--BOTAO PARA FINALIZAR PEDIDO-->
+      <button type="button" class="btn btn-primary" (click)="finalizaCompra($event)">Finalizar Compra<span class="sr-only">Finalizar Compra</span>
+      </button>      
+         
+      <br>
+      <div class="barra shadow-lg p-3 mb-5 bg-white rounded">
+      <p class="lead">Progresso da sua compra</p>
+        <div class="progress">
+        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+      </div>
+      </div>
+</div>

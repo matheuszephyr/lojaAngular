@@ -1,0 +1,31 @@
+<div class="container shadow-lg p-3 mb-5 bg-white rounded">
+    <h1 class="display-4">Identificação</h1>
+    <p class="lead">Informe suas credenciais para prosseguir.</p>
+    <hr class="my-4">    
+        <form>
+            <div class="form-group">
+            <label>Nome</label>
+            <input #txtnome type="text" class="form-control" id="TxtNomeUsuario" placeholder="Digite seu nome" maxlength="100">
+            </div>
+            <br>
+            <div class="form-group">
+            <label>E-mail</label>
+            <input #txtemail type="email" class="form-control" id="TxtEmailUsuario" placeholder="Digite seu e-mail" maxlength="100">
+            </div>
+            <br>
+            <div class="form-group">
+            <label>Telefone</label>
+            <input #txttelefone type="text" class="form-control" id="TxtTelefone" placeholder="Digite apenas os números" mask="(00) 0000-0000" maxlength="10">
+            </div>
+            <br>
+            <button type="submit" class="btn btn-primary" (click)="gotoFinal(txtnome.value,txtemail.value,txttelefone.value, $event)">Acessar</button>
+
+            <div class="barra shadow-lg p-3 mb-5 bg-white rounded">
+            <p class="lead">Progresso da sua compra</p>
+                <div class="progress">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            </div>
+        </form>    
+</div>
+

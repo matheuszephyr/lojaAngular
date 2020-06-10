@@ -1,0 +1,63 @@
+.display-4{
+    color: darkblue;
+}
+.lead{
+    color: darkblue;
+}
+
+.quant{
+    width: 17%;
+}
+
+.lin{
+    vertical-align: center !important;
+    justify-content: center !important;
+}
+
+img{    
+    width: 5%;
+}
+
+.barra{
+    margin-top: 12px;
+    margin-bottom: 10px !important;
+}
+
+.cabeca{
+    color: white;
+}
+
+.numeroPed{
+    color: red;
+    font: 40 20px Roboto, "Helvetica Neue", sans-serif;
+    font-weight: 500;
+}
+.botao{
+    background-color: darkblue;
+}
+
+.total{
+    text-align: center;    
+    color: green;
+    font: 40 20px Roboto, "Helvetica Neue", sans-serif;   
+    background-color:greenyellow;    
+    border-radius: 10px 20px; 
+    border-color: green;
+    align-content: center;
+    font-weight: 500;   
+    padding: 5px;
+}
+
+.caixa{
+    text-align: center;
+    width:30%;    
+    height:26px;    
+    background-color:greenyellow;    
+    border-radius: 10px 20px;
+    float: right;
+    box-sizing: border-box;
+}
+
+h1{
+    font-size: 40px;
+}

@@ -1,0 +1,23 @@
+.display-4{
+    color: darkblue;
+}
+.lead{
+    color: darkblue;
+}
+
+.container{
+    padding-top: 10px;
+}
+
+.barra{
+    margin-top: 12px;
+    margin-bottom: 10px !important;
+}
+
+label{
+    font-size: 20px;
+}
+
+h1{
+    font-size: 40px;
+}

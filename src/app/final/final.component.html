@@ -1,0 +1,48 @@
+<div class="container shadow-lg p-3 mb-5 bg-white rounded">
+
+    <h1 class="display-4">Pedido Finalizado</h1>
+    <p class="lead">Pedido realizado com sucesso, confira abaixo informações da compra.</p>
+    <hr class="my-4">
+    <p class="numeroPed">Numero do Pedido : {{pedidoCompleto.idPedido}}</p>
+        <table class="table table-striped">
+            <thead class="bg-primary cabeca">
+            <tr class="bg-primary">            
+                <th scope="col" class="bg-primary">Produto</th>
+                <th scope="col" class="bg-primary">Valor</th>
+                <th scope="col" class="bg-primary">Quantidade</th>
+                <th scope="col" class="bg-primary">Total</th>                
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let produto of pedidoCompleto.produtos">                                  
+                <td class="align-middle">{{produto.nome}}</td>
+                <td class="align-middle">R$ {{produto.valor | number : '1.2-2' }}</td>
+                <td class="align-middle">{{produto.quantidade}}</td>
+                <td class="align-middle">R$ {{produto.total | number : '1.2-2' }}</td>                
+            </tr>          
+            </tbody>
+        </table>
+        <div>
+        <p class="total">Total : R$ {{total | number : '1.2-2' }}</p>
+        </div>
+
+        <div class="ajust card text-white bg-primary mb-9">
+            <div class="card-header"><b>Informações do Comprador</b></div>
+            <div class="divusu card-body">
+              <p class="card-title">Nome : {{usuario.nome}}</p>
+              <p class="card-text">E-mail : {{usuario.email}}</p>
+              <p class="card-text">Telefone : {{usuario.telefone}}</p>
+            </div>
+        </div>   
+        
+        <div>
+        <button type="button" class="btn btn-primary" (click)="voltarHome()">Fazer Outro Pedido<span class="sr-only">Fazer Outro Pedido</span></button>
+        </div> 
+
+    <div class="barra shadow-lg p-3 mb-5 bg-white rounded">
+        <p class="lead">Progresso da sua compra</p>
+        <div class="progress">
+            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+    </div>
+</div>

@@ -49,7 +49,7 @@ export class HomeComponent implements OnInit {
         }, 4000)
       }
 
-      this.router.navigate(['cesta/' + this.nroPedido]);             
+      //this.router.navigate(['cesta/' + this.nroPedido]);             
     }    
   }
 

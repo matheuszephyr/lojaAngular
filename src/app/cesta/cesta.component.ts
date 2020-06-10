@@ -61,7 +61,7 @@ export class CestaComponent implements OnInit {
         }, 2000)
     }
     if(this.nroUsuario == 0){
-      setTimeout(() => {this.router.navigate(['login/' + this.nroPedido + '/' + this.nroUsuario]);}, 3000)
+      setTimeout(() => {this.router.navigate(['login/' + this.nroPedido + '/' + this.nroUsuario]);}, 4000)
     }      
   }
 

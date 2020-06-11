@@ -38,11 +38,13 @@ export class CestaComponent implements OnInit {
     //this.getPedido();  
     if(this.pedidoCompleto.produtos.length < 1){
       setTimeout(() => {        
-        this.getPedido();        
-        this.total = this.pedidoCompleto.produtos.reduce((total, b) => total + b.total , 0);  
-        this.load = false;      
+        this.getPedido();            
       }, 2500)
-    }       
+    }    
+    setTimeout(() => { 
+      this.load = false;            
+      this.total = this.pedidoCompleto.produtos.reduce((total, b) => total + b.total , 0);              
+    }, 3000)    
   }
 
   conta = this.pedidoCompleto.produtos.length;  
